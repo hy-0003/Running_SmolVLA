@@ -21,14 +21,13 @@
 </p>
 
 
-## What is this?
+<h2 id="whatisthis">1.What is this?</h2>
 
 This repository documents my end-to-end reproduction of [SmolVLA](https://huggingface.co/lerobot/smolvla_base) — a lightweight Vision-Language-Action model released by Hugging Face.I did not re-invent the model; instead, I independently deployed, trained, and evaluated the official architecture in a constrained Windows 11 environment, overcoming real-world engineering obstacles.
 
 The goal: understand every piece of a modern VLA pipeline, from data loading to action generation, and demonstrate that cutting‑edge robot learning can be done outside Linux clouds.
 
-
-## Demo Videos
+<h2 id="demo-videos">2. Demo Videos</h2>
 
 <table align="center">
   <tr>
@@ -36,8 +35,8 @@ The goal: understand every piece of a modern VLA pipeline, from data loading to 
     <td align="center"><b>❌ Early Failure</b></td>
   </tr>
   <tr>
-    <td><img src="task8_s.gif" width="450" alt="sucess demo"/></td>
-    <td><img src="task8_f.gif" width="450" alt="failure demo"/></td>
+    <td><img src="task8_s.gif" width="350" alt="sucess demo"/></td>
+    <td><img src="task8_f.gif" width="350" alt="failure demo"/></td>
   </tr>
   <tr>
     <td align="center"><i>Model successfully picks the object after convergence.</i></td>
@@ -46,7 +45,7 @@ The goal: understand every piece of a modern VLA pipeline, from data loading to 
 </table>
 
 
-## Architecture
+<h2 id="architecture">3.Architecture</h2>
 
 SmolVLA is a lightweight and efficient Vision-Language-Action model designed for low-cost robots, capable of training and inference on consumer-grade GPUs or even CPUs. Its core idea is to reuse the perception capabilities of a pretrained VLM but truncate its language decoding layers, using only mid-level features to condition a compact action generation head. This drastically reduces computational cost while achieving performance comparable to models 10× larger.
 
@@ -92,7 +91,8 @@ SmolVLA is a lightweight and efficient Vision-Language-Action model designed for
 
 
 
-## Windows Deployment
+<h2 id="windows-deployment">4.Windows Deployment</h2>
+
 
 All experiments were run natively on **Windows 11** with an NVIDIA RTX 4060 (8 GB VRAM).  
 
@@ -187,20 +187,20 @@ Generated videos are saved to data/.
 
 
 
-## This Repository Structure
+<h2 id="structure">5.This Repository Structure</h2>
 
 ```
-SmolVLA-Deployment/
+Running_SmolVLA/
+├── LICENSE
 ├── README.md
+├── SmolVLA.pdf
+├── architecture.png
 ├── eval_LIBERO.py
-├── configs/ # Training configs (adapted for Windows)
-├── scripts/ # Helper scripts (data download, env fix, etc.)
-├── logs/ # TensorBoard / training logs
-├── eval_videos/ # Raw evaluation videos (success & failure)
-└── architecture/ # Architecture diagram sources (draw.io / SVG)
+├── task8_f.gif
+└── task8_s.gif
 ```
 
-## Acknowledgements
+<h2 id="acknowledgements">6.Acknowledgements</h2>
 
 This work would be impossible without the amazing open‑source contributions of the following projects and people:
 
@@ -210,7 +210,7 @@ This work would be impossible without the amazing open‑source contributions of
 - 🌍 The open‑source community on GitHub and Hugging Face for countless answered issues.
 
 
-## 📫 Contact & Links
+<h2 id="contact">7.📫 Contact & Links</h2>
 
 ### *Hi! I’m a freshman in **EmboideAI**, eager to learn more — feel free to reach out!*
 
