@@ -44,6 +44,7 @@ The goal: understand every piece of a modern VLA pipeline, from data loading to 
   </tr>
 </table>
 
+<p align="center"><b>👉 <a href="more_demos.md">More Demos (10 Tasks)</a></b></p>
 
 <h2 id="architecture">3.Architecture</h2>
 
